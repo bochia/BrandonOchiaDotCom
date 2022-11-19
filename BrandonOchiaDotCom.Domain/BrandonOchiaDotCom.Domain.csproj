@@ -10,4 +10,12 @@
     <Folder Include="Enums\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BrandonOchiaDotCom.DAL\BrandonOchiaDotCom.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -2,12 +2,12 @@
 {
     using Microsoft.EntityFrameworkCore;
 
-    public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class
+    public abstract class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         private DbContext dbContext;
         private DbSet<TEntity> table;
 
-        public BaseRepository(DbContext dbContext)
+        public GenericRepository(DbContext dbContext)
         {
             this.dbContext = dbContext;
             table = this.dbContext.Set<TEntity>();

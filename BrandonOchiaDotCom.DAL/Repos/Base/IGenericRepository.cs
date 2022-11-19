@@ -1,6 +1,6 @@
 ﻿namespace BrandonOchiaDotCom.DAL.Repos.Base
 {
-    public interface IBaseRepository<TEntity> where TEntity : class
+    public interface IGenericRepository<TEntity> where TEntity : class
     {
         IEnumerable<TEntity> GetAll();
         TEntity GetById(object id);
