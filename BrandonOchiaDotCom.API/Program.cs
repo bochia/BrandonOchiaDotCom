@@ -1,3 +1,4 @@
+using BrandonOchiaDotCom.Domain.Mapping;
 using static BrandonOchiaDotCom.API.Extensions.DependencyInjectionExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddServices();
 builder.Services.AddRepos();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 
 var app = builder.Build();
 
