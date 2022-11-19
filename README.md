@@ -6,3 +6,4 @@
 * Try using an in memory db context until you can get your database setup.
 * Add return types for api swagger documentation.
 * Implement all methods for controller, service, and repos.
+* What is the correct way to specify connection string for dbcontext? How can I put it in a settings file? Can I use dependency injection?
