@@ -4,4 +4,3 @@
 * Find the correct data type to return from your Api (IActionResult)
 * How to add code if one of your controllers throws an exception.
 * Try using an in memory db context until you can get your database setup.
-* 
