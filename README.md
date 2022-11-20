@@ -12,6 +12,7 @@
 * [] Add upsert method to the repository.
 * [] Add defensive code to generic repository.
 * [] Add logging to each of the layers. Needs to be everywhere.
+* [] How to hide your user name and password in connection strings?
 
 
 
