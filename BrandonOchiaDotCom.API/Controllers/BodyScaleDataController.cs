@@ -84,8 +84,6 @@ namespace BrandonOchiaDotCom.API.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Get(int id)
         {
-            throw new Exception("ochia - exception to test the error handler controller.");
-
             if (id <= 0)
             {
                 return BadRequest($"{nameof(id)} must be greater than 0.");
