@@ -22,6 +22,10 @@ namespace BrandonOchiaDotCom.API.Controllers
 
         [HttpPost]
         [Route("create/")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BodyScaleDataPointDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Create(BodyScaleDataPointDto model)
         {
             if (model is null)
@@ -49,6 +53,9 @@ namespace BrandonOchiaDotCom.API.Controllers
 
         [HttpDelete]
         [Route("delete/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Delete(int id)
         {
             if (id <= 0)
@@ -71,6 +78,10 @@ namespace BrandonOchiaDotCom.API.Controllers
 
         [HttpGet]
         [Route("get/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BodyScaleDataPointDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Get(int id)
         {
             throw new Exception("ochia - exception to test the error handler controller.");
@@ -100,6 +111,9 @@ namespace BrandonOchiaDotCom.API.Controllers
 
         [HttpGet]
         [Route("getall/")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<BodyScaleDataPointDto>))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult GetAll()
         {
             ServiceResponse<IEnumerable<BodyScaleDataPointDto>> getAllResponse = bodyScaleDataService.GetAll();
@@ -121,6 +135,10 @@ namespace BrandonOchiaDotCom.API.Controllers
 
         [HttpPut]
         [Route("update/")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(BodyScaleDataPointDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Update(BodyScaleDataPointDto model)
         {
             if (model is null)
