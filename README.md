@@ -8,7 +8,10 @@
 * [] Implement all methods for controller, service, and repos.
 * [] What is the correct way to specify connection string for dbcontext? How can I put it in a settings file? Can I use dependency injection?
 * [] Refactor Update and save method for BaseRepository to use the best practices.
-* Repos shouldn't be using DataContext in the constructor. Need to be using an Interface.
+* [] Repos shouldn't be using DataContext in the constructor. Need to be using an Interface.
+* [] Add upsert method to the repository.
+* [] Add defensive code to generic repository.
+* [] Add logging to each of the layers. Needs to be everywhere.
 
 
 
