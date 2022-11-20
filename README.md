@@ -10,6 +10,8 @@
 * [] Refactor Update and save method for BaseRepository to use the best practices.
 * [] Repos shouldn't be using DataContext in the constructor. Need to be using an Interface.
 * [] Add upsert method to the repository.
+* [] Add defensive code to generic repository.
+* [] Add logging to each of the layers. Needs to be everywhere.
 
 
 
