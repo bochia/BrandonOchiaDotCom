@@ -1,13 +1,13 @@
 ﻿namespace BrandonOchiaDotCom.DAL.Repos
 {
-    using BrandonOchiaDotCom.DAL.Contexts;
     using BrandonOchiaDotCom.DAL.Models;
     using BrandonOchiaDotCom.DAL.Repos.Base;
     using BrandonOchiaDotCom.DAL.Repos.Interfaces;
+    using Microsoft.EntityFrameworkCore;
 
     public class BodyScaleDataPointRepo : GenericRepository<BodyScaleDataPoint>, IBodyScaleDataPointRepo
     {
-        public BodyScaleDataPointRepo(DataContext dbContext) : base(dbContext)
+        public BodyScaleDataPointRepo(DbContext dbContext) : base(dbContext)
         {
         }
     }

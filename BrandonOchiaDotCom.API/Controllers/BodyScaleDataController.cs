@@ -21,7 +21,7 @@ namespace BrandonOchiaDotCom.API.Controllers
 
 
         [HttpPost]
-        [Route("/create/")]
+        [Route("create/")]
         public IActionResult Create(BodyScaleDataPointDto model)
         {
             if (model is null)
@@ -48,7 +48,7 @@ namespace BrandonOchiaDotCom.API.Controllers
 
 
         [HttpDelete]
-        [Route("/delete/{id}")]
+        [Route("delete/{id}")]
         public IActionResult Delete(int id)
         {
             if (id <= 0)
@@ -70,7 +70,7 @@ namespace BrandonOchiaDotCom.API.Controllers
 
 
         [HttpGet]
-        [Route("/get/{id}")]
+        [Route("get/{id}")]
         public IActionResult Get(int id)
         {
             if (id <= 0)
@@ -97,7 +97,7 @@ namespace BrandonOchiaDotCom.API.Controllers
 
 
         [HttpGet]
-        [Route("/getall/")]
+        [Route("getall/")]
         public IActionResult GetAll()
         {
             ServiceResponse<IEnumerable<BodyScaleDataPointDto>> getAllResponse = bodyScaleDataService.GetAll();
@@ -118,7 +118,7 @@ namespace BrandonOchiaDotCom.API.Controllers
         }
 
         [HttpPut]
-        [Route("/update/")]
+        [Route("update/")]
         public IActionResult Update(BodyScaleDataPointDto model)
         {
             if (model is null)
