@@ -187,7 +187,7 @@
                     HttpStatusCode = StatusCodes.Status400BadRequest,
                     Success = false,
                     ErrorCode = (int)ServiceResponseErrorCodes.ErrorUpdatingItemSinceInvalidIdWasGiven,
-                    ErrorMessage = $"{nameof(BodyScaleDataPointDto)} model must have id > 0 when updating.",
+                    ErrorMessage = $"{nameof(BodyScaleDataPointDto)} model must have id greater than 0 when updating.",
                 };
             }
 

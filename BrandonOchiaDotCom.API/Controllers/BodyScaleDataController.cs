@@ -19,7 +19,85 @@ namespace BrandonOchiaDotCom.API.Controllers
             this.logger = logger;
         }
 
-        [HttpGet(Name = "GetAll")]
+
+        [HttpPost]
+        [Route("/create/")]
+        public IActionResult Create(BodyScaleDataPointDto model)
+        {
+            if (model is null)
+            {
+                return BadRequest();
+            }
+
+            ServiceResponse<BodyScaleDataPointDto> createResponse = bodyScaleDataService.Create(model);
+
+            if (!createResponse.Success)
+            {
+                return Problem(
+                    detail: createResponse.ErrorMessage,
+                    statusCode: createResponse.ErrorCode);
+            }
+
+            if (createResponse.Data is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(createResponse.Data);
+        }
+
+
+        [HttpDelete]
+        [Route("/delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            if (id <= 0)
+            {
+                return BadRequest($"{nameof(id)} must be greater than 0.");
+            }
+
+            ServiceResponse deleteResponse = bodyScaleDataService.Delete(id);
+
+            if (!deleteResponse.Success)
+            {
+                return Problem(
+                    detail: deleteResponse.ErrorMessage,
+                    statusCode: deleteResponse.ErrorCode);
+            }
+
+            return Ok();
+        }
+
+
+        [HttpGet]
+        [Route("/get/{id}")]
+        public IActionResult Get(int id)
+        {
+            if (id <= 0)
+            {
+                return BadRequest($"{nameof(id)} must be greater than 0.");
+            }
+
+            ServiceResponse<BodyScaleDataPointDto> getResponse = bodyScaleDataService.Get(id);
+
+            if (!getResponse.Success)
+            {
+                return Problem(
+                    detail: getResponse.ErrorMessage,
+                    statusCode: getResponse.ErrorCode);
+            }
+
+            if (getResponse.Data is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(getResponse.Data);
+        }
+
+
+        [HttpGet]
+        [Route("/getall/")]
         public IActionResult GetAll()
         {
             ServiceResponse<IEnumerable<BodyScaleDataPointDto>> getAllResponse = bodyScaleDataService.GetAll();
@@ -37,6 +115,32 @@ namespace BrandonOchiaDotCom.API.Controllers
             }
 
             return Ok(getAllResponse.Data);
+        }
+
+        [HttpPut]
+        [Route("/update/")]
+        public IActionResult Update(BodyScaleDataPointDto model)
+        {
+            if (model is null)
+            {
+                return BadRequest();
+            }
+
+            ServiceResponse<BodyScaleDataPointDto> createResponse = bodyScaleDataService.Update(model);
+
+            if (!createResponse.Success)
+            {
+                return Problem(
+                    detail: createResponse.ErrorMessage,
+                    statusCode: createResponse.ErrorCode);
+            }
+
+            if (createResponse.Data is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(createResponse.Data);
         }
     }
 }
