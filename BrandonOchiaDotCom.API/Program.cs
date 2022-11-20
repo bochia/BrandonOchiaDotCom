@@ -1,3 +1,4 @@
+using BrandonOchiaDotCom.DAL.Contexts;
 using BrandonOchiaDotCom.Domain.Mapping;
 using static BrandonOchiaDotCom.API.Extensions.DependencyInjectionExtensions;
 
@@ -9,9 +10,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
+builder.Services.AddDbContext<DataContext>();
 builder.Services.AddServices();
 builder.Services.AddRepos();
-builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
 
 var app = builder.Build();
 
