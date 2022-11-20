@@ -173,22 +173,6 @@
                     ErrorMessage = errorMessage
                 };
             }
-
-            // ochia - can I delete this?
-            //var data = Enumerable.Range(1, 5).Select(index => new BodyScaleDataPointDto
-            //{
-            //    Id = Random.Shared.Next(0, 50),
-            //    Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            //    WeightPounds = Random.Shared.Next(0, 50),
-            //    BodyFatPercentage = Random.Shared.Next(0, 50),
-            //})
-            //.ToArray();
-
-            //return new ServiceResponse<IEnumerable<BodyScaleDataPointDto>>()
-            //{
-            //    Success = true,
-            //    Data = data,
-            //};
         }
 
         /// <inheritdoc />
