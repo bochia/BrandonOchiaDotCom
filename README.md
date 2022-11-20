@@ -15,6 +15,7 @@
 * Make a generic service class that has CRUD.
 * Make a BaseController class with things you need Code for returning correct Problem from service response. Or maybe you can use auto mapper for this?
 * Do I need to add some logic inside of Create and Update for if the object couldn't be found? Is it if fine if that gets handled by the exception catch?
+* Add Base entity logical delete, update and created time, user.
 
 
 
