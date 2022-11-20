@@ -6,7 +6,7 @@ namespace BrandonOchiaDotCom.API.Controllers
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class BodyScaleDataController : ControllerBase
     {
         private readonly IBodyScaleDataService bodyScaleDataService;
@@ -73,6 +73,8 @@ namespace BrandonOchiaDotCom.API.Controllers
         [Route("get/{id}")]
         public IActionResult Get(int id)
         {
+            throw new Exception("ochia - exception to test the error handler controller.");
+
             if (id <= 0)
             {
                 return BadRequest($"{nameof(id)} must be greater than 0.");
