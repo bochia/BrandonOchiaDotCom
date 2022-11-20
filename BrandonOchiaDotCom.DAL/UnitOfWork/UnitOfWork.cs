@@ -6,12 +6,12 @@
     public class UnitOfWork : IUnitOfWork
     {
         private readonly DbContext dbContext;
-        private readonly IBodyScaleDataPointRepo bodyScaleDataPoints;
+        public IBodyScaleDataPointRepo BodyScaleDataPoints { get; }
 
         public UnitOfWork(DbContext dbContext, IBodyScaleDataPointRepo bodyScaleDataPointRepo)
         {
             this.dbContext = dbContext;
-            bodyScaleDataPoints = bodyScaleDataPointRepo;
+            BodyScaleDataPoints = bodyScaleDataPointRepo;
         }
 
         public void Save()

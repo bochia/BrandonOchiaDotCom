@@ -1,11 +1,15 @@
 ﻿namespace BrandonOchiaDotCom.BLL.Models
 {
-    public class ServiceResponse<T>
+    public class ServiceResponse
     {
-        public T? Data { get; set; }
         public int ErrorCode { get; set; }
         public string? ErrorMessage { get; set; }
         public int HttpStatusCode { get; set; }
         public bool Success { get; set; } = false; // default to failure.
+    }
+
+    public class ServiceResponse<T> : ServiceResponse
+    {
+        public T? Data { get; set; }
     }
 }

@@ -15,7 +15,7 @@
         /// <summary>
         /// Delete a body scale data point.
         /// </summary>
-        void Delete();
+        ServiceResponse Delete(int id);
 
         /// <summary>
         /// Get a body scale data point by its id.
@@ -35,6 +35,6 @@
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        ServiceResponse<BodyScaleDataPointDto> Update(int id);
+        ServiceResponse<BodyScaleDataPointDto> Update(BodyScaleDataPointDto model);
     }
 }

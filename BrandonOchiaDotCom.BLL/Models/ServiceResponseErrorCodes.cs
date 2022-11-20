@@ -7,7 +7,7 @@
         ErrorCreatingItemSinceItAlreadyHasAnID,
         ErrorDeletingItem,
         ErrorUpdatingItem,
-        ErrorUpdatingItemSinceItDoesntHaveAnID,
+        ErrorUpdatingItemSinceInvalidIdWasGiven,
         ErrorRetrievingItem,
         ErrorRetrievingItems,
         ErrorDuringProcessing
