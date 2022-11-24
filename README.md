@@ -19,19 +19,59 @@
 
 
 /// <inheritdoc/>
-        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate, string[] includeProperties = null)
+public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate, string[] includeProperties = null)
+{
+    if (includeProperties != null && includeProperties.Any())
+    {
+        var query = this.dbSet.Where(predicate).AsQueryable();
+
+        foreach (string include in includeProperties)
         {
-            if (includeProperties != null && includeProperties.Any())
-            {
-                var query = this.dbSet.Where(predicate).AsQueryable();
-
-                foreach (string include in includeProperties)
-                {
-                    query = query.Include(include);
-                }
-
-                return query.ToList();
-            }
-
-            return this.dbSet.Where(predicate).ToList();
+            query = query.Include(include);
         }
+
+        return query.ToList();
+    }
+
+    return this.dbSet.Where(predicate).ToList();
+}
+
+
+///<inheritdoc/>
+public IQueryable<BriefWorkflow> GetAll(bool includeDeleted = false)
+{
+    IQueryable<BriefWorkflow> entities = null;
+
+    if (includeDeleted)
+    {
+        entities = deliveryContext.BriefWorkflows;
+    }
+    else
+    {
+        entities = deliveryContext.BriefWorkflows.Where(x => x.IsDeleted == false);
+    }
+
+    return entities;
+}
+
+///<inheritdoc/>
+public BriefWorkflow GetById(int id, bool includeDeleted = false)
+{
+    if (id <= 0)
+    {
+        LogAndThrowArgumentException(nameof(id), "GetById - Id should be greater than 0");
+    }
+
+    BriefWorkflow entity = null;
+
+    if (includeDeleted)
+    {
+        entity = deliveryContext.BriefWorkflows.Find(id);
+    }
+    else
+    {
+        entity = deliveryContext.BriefWorkflows.Where(x => x.ID == id && x.IsDeleted == false).SingleOrDefault();
+    }
+
+    return entity;
+}
