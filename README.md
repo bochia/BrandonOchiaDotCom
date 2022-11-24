@@ -54,24 +54,13 @@ public IQueryable<BriefWorkflow> GetAll(bool includeDeleted = false)
     return entities;
 }
 
-///<inheritdoc/>
-public BriefWorkflow GetById(int id, bool includeDeleted = false)
+/// <inheritdoc/>
+public DeliveryTemplateType GetByID(int id, bool includeDeleted = false)
 {
     if (id <= 0)
     {
-        LogAndThrowArgumentException(nameof(id), "GetById - Id should be greater than 0");
+        LogAndThrowArgumentException(nameof(id), "GetByID - id must be greater than 0.");
     }
 
-    BriefWorkflow entity = null;
-
-    if (includeDeleted)
-    {
-        entity = deliveryContext.BriefWorkflows.Find(id);
-    }
-    else
-    {
-        entity = deliveryContext.BriefWorkflows.Where(x => x.ID == id && x.IsDeleted == false).SingleOrDefault();
-    }
-
-    return entity;
+    return GetAll(includeDeleted).FirstOrDefault(x => x.ID == id);
 }
