@@ -12,9 +12,9 @@
             this.dbContext = dbContext;
             table = this.dbContext.Set<TEntity>();
         }
-        public IEnumerable<TEntity> GetAll()
+        public IQueryable<TEntity> GetAll()
         {
-            return table.ToList();
+            return table;
         }
         public TEntity GetById(object id)
         {

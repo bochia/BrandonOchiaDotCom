@@ -2,7 +2,7 @@
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {
-        IEnumerable<TEntity> GetAll();
+        IQueryable<TEntity> GetAll();
         TEntity GetById(object id);
         void Insert(TEntity obj);
         void Update(TEntity obj);
