@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrandonOchiaDotCom.DAL", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrandonOchiaDotCom.Domain", "BrandonOchiaDotCom.Domain\BrandonOchiaDotCom.Domain.csproj", "{A2D9A832-EB8A-45E3-9331-9EBB4668E0AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrandonOchiaDotCom.API", "BrandonOchiaDotCom.API\BrandonOchiaDotCom.API.csproj", "{B7EAD22B-F03E-4155-9262-DAA6BD602BD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrandonOchiaDotCom.API", "BrandonOchiaDotCom.API\BrandonOchiaDotCom.API.csproj", "{B7EAD22B-F03E-4155-9262-DAA6BD602BD8}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "brandonochiadotcom.spa", "BrandonOchiaDotCom.SPA\brandonochiadotcom.spa.esproj", "{2D729B62-93EC-484D-AC2F-B27E1BFB7A8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{B7EAD22B-F03E-4155-9262-DAA6BD602BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7EAD22B-F03E-4155-9262-DAA6BD602BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7EAD22B-F03E-4155-9262-DAA6BD602BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D729B62-93EC-484D-AC2F-B27E1BFB7A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D729B62-93EC-484D-AC2F-B27E1BFB7A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D729B62-93EC-484D-AC2F-B27E1BFB7A8F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2D729B62-93EC-484D-AC2F-B27E1BFB7A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D729B62-93EC-484D-AC2F-B27E1BFB7A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D729B62-93EC-484D-AC2F-B27E1BFB7A8F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
