@@ -152,8 +152,8 @@
 
             try
             {
-                IEnumerable<BodyScaleDataPoint> entities = unitOfWork.BodyScaleDataPoints.GetAll();
-                IEnumerable<BodyScaleDataPointDto> result = mapper.Map<IEnumerable<BodyScaleDataPointDto>>(entities);
+                IQueryable<BodyScaleDataPoint> entities = unitOfWork.BodyScaleDataPoints.GetAll();
+                IEnumerable<BodyScaleDataPointDto> result = mapper.Map<IEnumerable<BodyScaleDataPointDto>>(entities.AsEnumerable());
 
                 return new ServiceResponse<IEnumerable<BodyScaleDataPointDto>>()
                 {

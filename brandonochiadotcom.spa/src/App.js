@@ -25,11 +25,11 @@ export default class App extends Component {
                 </thead>
                 <tbody>
                     {forecasts.map(forecast =>
-                        <tr key={forecast.date}>
+                        <tr key={forecast.id}>
                             <td>{forecast.date}</td>
-                            <td>{forecast.temperatureC}</td>
-                            <td>{forecast.temperatureF}</td>
-                            <td>{forecast.summary}</td>
+                            <td>{forecast.weightPounds}</td>
+                            <td>{forecast.weightKilograms}</td>
+                            <td>{forecast.bodyFatPercentage}</td>
                         </tr>
                     )}
                 </tbody>
@@ -52,8 +52,9 @@ export default class App extends Component {
     }
 
     async populateWeatherData() {
-        const response = await fetch('weatherforecast');
+        const response = await fetch('https://localhost:7247/api/BodyScaleData/getall');
         const data = await response.json();
+        console.log(data);
         this.setState({ forecasts: data, loading: false });
     }
 }

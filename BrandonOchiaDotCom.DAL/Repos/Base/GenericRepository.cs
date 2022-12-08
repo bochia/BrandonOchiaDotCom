@@ -14,7 +14,7 @@
         }
         public IQueryable<TEntity> GetAll()
         {
-            return table;
+            return table.AsQueryable();
         }
         public TEntity GetById(object id)
         {
