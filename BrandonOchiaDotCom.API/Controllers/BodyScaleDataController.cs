@@ -1,22 +1,19 @@
 namespace BrandonOchiaDotCom.API.Controllers
 {
+    using BrandonOchiaDotCom.API.Controllers.Base;
     using BrandonOchiaDotCom.BLL.Models;
     using BrandonOchiaDotCom.BLL.Services.Interfaces;
     using BrandonOchiaDotCom.Domain.DTOs;
     using Microsoft.AspNetCore.Mvc;
 
-    [ApiController]
-    [Route("api/[controller]")]
-    public class BodyScaleDataController : ControllerBase
+    public class BodyScaleDataController : BaseApiController<BodyScaleDataController>
     {
         private readonly IBodyScaleDataService bodyScaleDataService;
-        private readonly ILogger<BodyScaleDataController> logger;
 
         public BodyScaleDataController(IBodyScaleDataService bodyScaleDataService,
-                                       ILogger<BodyScaleDataController> logger)
+                                       ILogger<BodyScaleDataController> logger) : base(logger)
         {
             this.bodyScaleDataService = bodyScaleDataService;
-            this.logger = logger;
         }
 
 

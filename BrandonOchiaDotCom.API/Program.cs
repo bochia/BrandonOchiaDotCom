@@ -4,6 +4,16 @@ using static BrandonOchiaDotCom.API.Extensions.DependencyInjectionExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+const string AllowedSpecificOrigins = "AllowedSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: AllowedSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("https://localhost:3000");
+                      });
+});
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -22,6 +32,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     app.UseExceptionHandler("/ExceptionHandler/error");
 }
+
+app.UseCors(AllowedSpecificOrigins);
 
 app.UseHttpsRedirection();
 

@@ -54,7 +54,6 @@ export default class App extends Component {
     async populateWeatherData() {
         const response = await fetch('https://localhost:7247/api/BodyScaleData/getall');
         const data = await response.json();
-        console.log(data);
         this.setState({ forecasts: data, loading: false });
     }
 }
