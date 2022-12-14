@@ -15,6 +15,8 @@
 * Make a BaseController class with things you need Code for returning correct Problem from service response. Or maybe you can use auto mapper for this?
 * Do I need to add some logic inside of Create and Update for if the object couldn't be found? Is it fine if that gets handled by the exception catch?
 * Add Base entity logical delete, update and created time, user.
+* ServiceResponse shouldn´t contain http status code. If get method doesn´t find data should return true with data null. It should be the controllers job to return check for null data and return 404 not found.
+* IMPORTANT - Repositories should return domain models!!!!!
 
 
 
