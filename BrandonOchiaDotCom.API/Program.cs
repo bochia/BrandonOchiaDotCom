@@ -1,8 +1,15 @@
 using BrandonOchiaDotCom.DAL.Contexts;
 using BrandonOchiaDotCom.Domain.Mapping;
+using Microsoft.EntityFrameworkCore;
 using static BrandonOchiaDotCom.API.Extensions.DependencyInjectionExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+IConfiguration configuration = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .Build();
 
 const string AllowedSpecificOrigins = "AllowedSpecificOrigins";
 builder.Services.AddCors(options =>
@@ -19,7 +26,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
-builder.Services.AddDbContext<DataContext>();
+builder.Services.AddDbContext<DataContext>(
+    options => options.UseSqlServer(configuration.GetConnectionString("BrandonOchiaDotCom")));
 builder.Services.AddServices();
 builder.Services.AddRepos();
 
