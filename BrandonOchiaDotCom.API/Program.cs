@@ -36,10 +36,11 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    app.UseExceptionHandler("/ExceptionHandler/error");
 }
+
+app.UseSwagger();
+app.UseSwaggerUI();
+app.UseExceptionHandler("/ExceptionHandler/error");
 
 app.UseCors(AllowedSpecificOrigins);
 
