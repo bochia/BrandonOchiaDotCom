@@ -136,19 +136,11 @@ export class Home extends Component {
                     </div>
                     <div className="w-20 skillBox mh-75">
                             <img className="skillIcon img-fluid mh-80" src="/Images/entityFrameworkIcon.png"></img>
-                            <div className="text-center text-break marginTop10">Entity Framework</div>
+                            <div className="text-center text-break marginTop10">Entity Framework Core</div>
                     </div>
                     <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/javascriptShield.jpg"></img>
-                            <div className="text-center text-break marginTop10">JavaScript</div>
-                    </div>
-                    <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/htmlShieldIcon.jpg"></img>
-                            <div className="text-center text-break marginTop10">HTML</div>
-                    </div>
-                    <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/cssShieldIcon.png"></img>
-                            <div className="text-center text-break marginTop10">CSS</div>
+                            <img className="skillIcon img-fluid mh-80" src="/Images/reactLogo.png"></img>
+                            <div className="text-center text-break marginTop10">ReactJS</div>
                     </div>
                     <div className="w-20 skillBox mh-75">
                             <img className="skillIcon img-fluid mh-80" src="/Images/visualStudioLogo.png"></img>
