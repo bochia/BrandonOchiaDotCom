@@ -127,8 +127,8 @@ export class Home extends Component {
                             <div className="text-center text-break marginTop10">C#</div>
                     </div>
                     <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/aspnetMVCLogo.png"></img>
-                            <div className="text-center text-break marginTop10">ASP.NET MVC</div>
+                            <img className="skillIcon img-fluid mh-80" src="/Images/aspNetCoreLogo.png"></img>
+                            <div className="text-center text-break marginTop10">ASP.NET Core Web API</div>
                     </div>
                     <div className="w-10 skillBox mh-75">
                             <img className="skillIcon img-fluid mh-80" src="/Images/microsoftSqlServerIcon.png"></img>
