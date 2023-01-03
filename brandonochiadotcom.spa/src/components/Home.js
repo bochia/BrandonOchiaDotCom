@@ -16,7 +16,7 @@ export class Home extends Component {
     }
 
     componentWillUnmount() {
-        // Make sure to destroy Typed instance on unmounting to prevent memory leaks
+        // Make sure to destroy Typed instance on unmounting to prevent memory leaks.
         this.typed.destroy();
     }
 

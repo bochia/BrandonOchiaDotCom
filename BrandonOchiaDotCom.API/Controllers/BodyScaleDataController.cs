@@ -95,7 +95,7 @@ namespace BrandonOchiaDotCom.API.Controllers
                     statusCode: getResponse.ErrorCode);
             }
 
-            if (getResponse.Data is null)
+            if (getResponse.Data == null)
             {
                 return NotFound();
             }
@@ -120,7 +120,7 @@ namespace BrandonOchiaDotCom.API.Controllers
                     statusCode: getAllResponse.ErrorCode);
             }
 
-            if (!getAllResponse.Data.Any())
+            if (getAllResponse.Data == null || !getAllResponse.Data.Any())
             {
                 return NotFound();
             }
