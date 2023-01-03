@@ -28,6 +28,13 @@ code {
 
 /*COPY PASTED CSS FROM OLD APPLICATION HERE.*/
 
+:root {
+    --main-bg-color-1: #181818;
+    --main-bg-color-2: black;
+    --accentTextColor: #ec0b80;
+    --border-radius: 30px;
+}
+
 .glowing-border {
     border: 2px solid #dadada;
     border-radius: 7px;
@@ -425,7 +432,7 @@ input {
 
 .gradientText {
     background: linear-gradient(135deg, rgba(236,11,128,1) 0%, rgba(240,80,53,1) 100%);
-    -webkit-background-clip: text; /*works in chrome*/
+    -webkit-background-clip: text; /*works in chrome & edge*/
     -webkit-text-fill-color: transparent;
 }
 
