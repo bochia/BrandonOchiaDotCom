@@ -13,5 +13,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="public\images\" />
+    <Folder Include="public\documents\" />
   </ItemGroup>
 </Project>
