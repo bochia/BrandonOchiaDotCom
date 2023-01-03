@@ -81,75 +81,79 @@ export class Home extends Component {
                             <div className="projectBoxMedia onTop row">
                                 <div className="col-5 align-self-center mh-100">
                                     <a href="">
-                                    <img className="img-fluid grayScaleTillHover" src="/Images/pdfIcon.png" alt="PDF Logo" />
-                                </a>
+                                        <img className="img-fluid grayScaleTillHover" src="/Images/pdfIcon.png" alt="PDF Logo" />
+                                    </a>
+                                </div>
+                                <div className="col-7 h-100 mh-100">
+                                    <div className="projectBoxDescription mh-100">
+                                        <h3 className="gradientText">PDF Splitter</h3>
+                                        <p>Full-stack web app that allows for splitting PDFs in number of different ways. </p>
+                                        <p>Makes use of file storage rather than writing and reading PDFs to a database.</p>
+                                        <a className="grayLink" href="">Go see project  <span className="fas fa-arrow-right"></span></a>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="col-7 h-100 mh-100">
-                                <div className="projectBoxDescription mh-100">
-                                    <h3 className="gradientText">PDF Splitter</h3>
-                                    <p>Full-stack web app that allows for splitting PDFs in number of different ways. </p>
-                                    <p>Makes use of file storage rather than writing and reading PDFs to a database.</p>
-                                    <a className="grayLink" href="">Go see project  <span className="fas fa-arrow-right"></span></a>
+                        </div>
+
+                        <div className="projectBox">
+                            <div className="projectBoxMedia onTop row">
+                                <div className="col-5 align-self-center mh-100">
+                                    <a href="">
+                                        <img className="img-fluid circleImage padding10 grayScaleTillHover" src="/Images/weightTrackerIcon.jpg" alt="Plot Icon" />
+                                    </a>
+                                </div>
+                                <div className="col-7 h-100 mh-100">
+                                    <div className="projectBoxDescription mh-100">
+                                        <h3 className="gradientText">Body Weight Tracker</h3>
+                                        <p>Full-stack web app for tracking body weight and body fat percentage over time. Great for diet monitoriing.</p>
+                                        <p>Implements full CRUD functionality, as well as AJAX calls to RESTful Web APIs.</p>
+                                        <a className="grayLink" href="">Go see project  <span className="fas fa-arrow-right"></span></a>
+                                    </div>
+                                </div>
                             </div>
+                        </div >
+
+                    </div >
+                </div >
+
+
+                <div id="skillsContainer" className="pageDividerBox grayBackground text-center">
+                    <div className="mh-10 gradientText">
+                        <h1>S k i l l s    &amp;    T e c h n o l o g i e s</h1>
+                    </div>
+                    <div className="d-flex flex-row flex-wrap justify-content-center mh-90">
+                        {/*<div className="w-10 skillBox mh-75">*/}
+                        {/*    <img className="skillIcon img-fluid mh-80" src="/Images/csharpLogo.png"></img>*/}
+                        {/*    <div className="text-center text-break marginTop10">C#</div>*/}
+                        {/*</div>*/}
+                        <div className="w-10 skillBox mh-75">
+                            <img className="skillIcon img-fluid mh-80" src="/Images/aspNetCoreLogo.png"></img>
+                            <div className="text-center text-break marginTop10">ASP.NET Core Web API</div>
+                        </div>
+                        <div className="w-10 skillBox mh-75">
+                            <img className="skillIcon img-fluid mh-80" src="/Images/microsoftSqlServerIcon.png"></img>
+                            <div className="text-center text-break marginTop10">SQL</div>
+                        </div>
+                        <div className="w-20 skillBox mh-75">
+                            <img className="skillIcon img-fluid mh-80" src="/Images/entityFrameworkIcon.png"></img>
+                            <div className="text-center text-break marginTop10">Entity Framework Core</div>
+                        </div>
+                        <div className="w-10 skillBox mh-75">
+                            <img className="skillIcon img-fluid mh-80" src="/Images/reactLogo.png"></img>
+                            <div className="text-center text-break marginTop10">ReactJS</div>
+                        </div>
+                        <div className="w-20 skillBox mh-75">
+                            <img className="skillIcon img-fluid mh-80" src="/Images/visualStudioLogo.png"></img>
+                            <div className="text-center text-break marginTop10">Visual Studio</div>
+                        </div>
+                        <div className="w-10 skillBox mh-75">
+                            <img className="skillIcon img-fluid mh-80" src="/Images/unitTestingIcon.png"></img>
+                            <div className="text-center text-break marginTop10">Unit Testing</div>
                         </div>
                     </div>
                 </div>
 
-                <div className="projectBox">
-                    <div className="projectBoxMedia onTop row">
-                        <div className="col-5 align-self-center mh-100">
-                            <a href="">
-                            <img className="img-fluid circleImage padding10 grayScaleTillHover" src="/Images/weightTrackerIcon.jpg" alt="Plot Icon" />
-                        </a>
-                    </div>
-                    <div className="col-7 h-100 mh-100">
-                        <div className="projectBoxDescription mh-100">
-                            <h3 className="gradientText">Body Weight Tracker</h3>
-                            <p>Full-stack web app for tracking body weight and body fat percentage over time. Great for diet monitoriing.</p>
-                            <p>Implements full CRUD functionality, as well as AJAX calls to RESTful Web APIs.</p>
-                            <a className="grayLink" href="">Go see project  <span className="fas fa-arrow-right"></span></a>
-                    </div>
-                </div>
-            </div>
-                </div >
-
             </div >
-        </div >
-
-
-            <div id="skillsContainer" className="pageDividerBox grayBackground text-center">
-                <div className="mh-10 gradientText">
-                    <h1>S k i l l s    &amp;    T e c h n o l o g i e s</h1>
-                </div>
-                <div className="d-flex flex-row flex-wrap justify-content-center mh-90">
-                    <div className="w-10 skillBox mh-75">
-                        <img className="skillIcon img-fluid mh-80" src="/Images/csharpLogo.png"></img>
-                            <div className="text-center text-break marginTop10">C#</div>
-                    </div>
-                    <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/aspNetCoreLogo.png"></img>
-                            <div className="text-center text-break marginTop10">ASP.NET Core Web API</div>
-                    </div>
-                    <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/microsoftSqlServerIcon.png"></img>
-                            <div className="text-center text-break marginTop10">SQL</div>
-                    </div>
-                    <div className="w-20 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/entityFrameworkIcon.png"></img>
-                            <div className="text-center text-break marginTop10">Entity Framework Core</div>
-                    </div>
-                    <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/reactLogo.png"></img>
-                            <div className="text-center text-break marginTop10">ReactJS</div>
-                    </div>
-                    <div className="w-20 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/visualStudioLogo.png"></img>
-                            <div className="text-center text-break marginTop10">Visual Studio</div>
-                    </div>
-                </div>
-            </div>
-
-    </div >
         );
     }
 }
