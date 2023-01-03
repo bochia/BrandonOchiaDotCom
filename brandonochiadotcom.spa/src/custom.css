@@ -741,3 +741,7 @@ input {
 .textRight {
     text-align: right;
 }
+
+.headshotPic{
+    width: 450px;
+}
