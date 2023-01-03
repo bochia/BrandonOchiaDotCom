@@ -423,11 +423,13 @@ input {
     background: linear-gradient(135deg, rgba(236,11,128,1) 0%, rgba(240,80,53,1) 100%);
 }
 
+/*ochia*/
+/*
 .gradientText {
     background: linear-gradient(135deg, rgba(236,11,128,1) 0%, rgba(240,80,53,1) 100%);
-    -webkit-background-clip: text; /*works in chrome*/
+    -webkit-background-clip: text; works in chrome
     -webkit-text-fill-color: transparent;
-}
+}*/
 
 .Transparency30Percent {
     opacity: 0.7;

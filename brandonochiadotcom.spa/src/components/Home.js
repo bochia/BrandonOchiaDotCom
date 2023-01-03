@@ -4,6 +4,13 @@ export class Home extends Component {
     static displayName = Home.name;
 
     componentDidMount() {
+
+        var particleContainer = $("#particleContainer").jParticle({
+            background: "black",
+            color: "#fff",
+            resize: true
+        });
+
         var options = {
             strings: ['Full-Stack Developer', 'Software Engineer', 'UW - Madison Graduate',
                 'Mechanical Engineering - Bachelor of Science Degree', 'Fisherman', 'Gamer', 'Devoted Cat Dad'],
