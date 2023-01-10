@@ -408,7 +408,7 @@ input {
     flex-direction: column;
     border-bottom: solid 4px;
     border-color: var(--accentTextColor);
-    margin: 20px;
+    margin: 5px;
 }
 
     .skillBox:hover {
@@ -538,6 +538,10 @@ input {
 
 .w-10 {
     width: 10%;
+}
+
+.w-15 {
+    width: 15%;
 }
 
 .w-20 {

@@ -124,7 +124,11 @@ export class Home extends Component {
                     <div className="d-flex flex-row flex-wrap justify-content-center mh-90">
                         <div className="w-10 skillBox mh-75">
                             <img className="skillIcon img-fluid mh-80" src="/Images/aspNetCoreLogo.png"></img>
-                            <div className="text-center text-break marginTop10">ASP.NET Core Web API</div>
+                            <div className="text-center text-break marginTop10">Web API</div>
+                        </div>
+                        <div className="w-15 skillBox mh-75">
+                            <img className="skillIcon img-fluid mh-80" src="/Images/azureLogo.png"></img>
+                            <div className="text-center text-break marginTop10">Azure</div>
                         </div>
                         <div className="w-10 skillBox mh-75">
                             <img className="skillIcon img-fluid mh-80" src="/Images/microsoftSqlServerIcon.png"></img>
@@ -147,6 +151,7 @@ export class Home extends Component {
                             <div className="text-center text-break marginTop10">Unit Testing</div>
                         </div>
                     </div>
+                    <br /><br />
                 </div>
 
             </div >
