@@ -6,7 +6,7 @@
 * [X] Add return types for api swagger documentation. (https://learn.microsoft.com/en-us/aspnet/core/web-api/action-return-types?view=aspnetcore-7.0)
 * [X] Implement all methods for controller.
 * [] What is the correct way to specify connection string for dbcontext? How can I put it in a settings file? Can I use dependency injection?
-* [] Add upsert method to the repository.
+* [] Add upsert method to the service. Repository shouldnt have upsert.
 * [] Add defensive code to generic repository.
 * [] Add logging to each of the layers. Needs to be everywhere.
 * [] How to hide your user name and password in connection strings? (https://stackoverflow.com/questions/7581801/how-can-i-hide-my-password-in-my-c-sharp-connection-string)
