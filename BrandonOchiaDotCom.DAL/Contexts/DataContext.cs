@@ -5,11 +5,10 @@
 
     public class DataContext : DbContext, IDataContext
     {
+        public DbSet<BodyScaleDataPoint> BodyScaleDataPoints { get; set; }
+
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
-
         }
-
-        public DbSet<BodyScaleDataPoint> BodyScaleDataPoints { get; set; }
     }
 }
