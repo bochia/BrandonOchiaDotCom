@@ -1,9 +1,15 @@
-function ProjectTile({ title, p1, p2, linkTo, imgSrc, altText, isCircleImage = false }) {
+function ProjectTile({ title, p1, p2, linkTo, imgSrc, altText, isCircleImage = false, workInProgress = false }) {
     let imgClassName = "img-fluid grayScaleTillHover";
 
     // if circle image then add some extra styling.
     if (isCircleImage) {
         imgClassName = "img-fluid circleImage padding10 grayScaleTillHover";
+    }
+
+    let linkHtml;
+
+    if (!workInProgress) {
+        linkHtml = <a className="grayLink" href={linkTo}>Go see project  <span className="fas fa-arrow-right"></span></a>;
     }
 
     return (
@@ -19,7 +25,7 @@ function ProjectTile({ title, p1, p2, linkTo, imgSrc, altText, isCircleImage = f
                         <h3 className="gradientText">{title}</h3>
                         <p>{p1}</p>
                         <p>{p2}</p>
-                        <a className="grayLink" href={linkTo}>Go see project  <span className="fas fa-arrow-right"></span></a>
+                        {linkHtml}
                     </div>
                 </div>
             </div>

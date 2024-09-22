@@ -83,6 +83,7 @@ export class Home extends Component {
                             imgSrc="/Images/weightTrackerIcon.jpg"
                             altText="Plot Icon"
                             isCircleImage={true}
+                            workInProgress={true}
                         />
                     </div >
                 </div >
