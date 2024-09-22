@@ -10,6 +10,7 @@ export class Home extends Component {
 
     componentDidMount() {
 
+        // eslint-disable-next-line
         var particleContainer = $("#particleContainer").jParticle({
             background: "black",
             color: "#fff",
