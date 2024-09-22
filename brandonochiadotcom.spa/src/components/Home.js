@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Typed from 'typed.js'
+import SkillTile from './SkillTile';
 //import $ from 'jquery';
 
 export class Home extends Component {
@@ -124,34 +125,13 @@ export class Home extends Component {
                         <h1>S k i l l s    &amp;    T e c h n o l o g i e s</h1>
                     </div>
                     <div className="d-flex flex-row flex-wrap justify-content-center mh-90">
-                        <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/aspNetCoreLogo.png"></img>
-                            <div className="text-center text-break marginTop10">Web API</div>
-                        </div>
-                        <div className="w-15 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/azureLogo.png"></img>
-                            <div className="text-center text-break marginTop10">Azure</div>
-                        </div>
-                        <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/microsoftSqlServerIcon.png"></img>
-                            <div className="text-center text-break marginTop10">SQL</div>
-                        </div>
-                        <div className="w-20 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/entityFrameworkIcon.png"></img>
-                            <div className="text-center text-break marginTop10">Entity Framework Core</div>
-                        </div>
-                        <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/reactLogo.png"></img>
-                            <div className="text-center text-break marginTop10">ReactJS</div>
-                        </div>
-                        <div className="w-20 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/visualStudioLogo.png"></img>
-                            <div className="text-center text-break marginTop10">Visual Studio</div>
-                        </div>
-                        <div className="w-10 skillBox mh-75">
-                            <img className="skillIcon img-fluid mh-80" src="/Images/unitTestingIcon.png"></img>
-                            <div className="text-center text-break marginTop10">Unit Testing</div>
-                        </div>
+                        <SkillTile text="Web API" src="/Images/aspNetCoreLogo.png" width={10} />
+                        <SkillTile text="Azure" src="/Images/azureLogo.png" width={15} />
+                        <SkillTile text="SQL" src="/Images/microsoftSqlServerIcon.png" width={10} />
+                        <SkillTile text="Entity Framework Core" src="/Images/entityFrameworkIcon.png" width={20} />
+                        <SkillTile text="React.js" src="/Images/reactLogo.png" width={10} />
+                        <SkillTile text="Visual Studio" src="/Images/visualStudioLogo.png" width={20} />
+                        <SkillTile text="Unit Testing" src="/Images/unitTestingIcon.png" width={10} />
                     </div>
                     <br /><br />
                 </div>
