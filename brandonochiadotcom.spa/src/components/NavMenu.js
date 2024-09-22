@@ -33,8 +33,11 @@ export class NavMenu extends Component {
                                 <NavLink tag={Link} className="navBarTextColor" to="/">Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} className="navBarTextColor" to="/bodyComposition">Body Composition</NavLink>
+                                <NavLink tag={Link} className="navBarTextColor" to="/pdfSplitter">Pdf Splitter</NavLink>
                             </NavItem>
+                            {/*<NavItem>*/}
+                            {/*    <NavLink tag={Link} className="navBarTextColor" to="/bodyComposition">Body Composition</NavLink>*/}
+                            {/*</NavItem>*/}
                         </ul>
                     </Collapse>
                 </Navbar>
