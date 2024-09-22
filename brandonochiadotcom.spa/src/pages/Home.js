@@ -71,14 +71,16 @@ export class Home extends Component {
                             title="PDF Splitter"
                             p1="Full-stack web app that allows for splitting PDFs in number of different ways."
                             p2="Makes use of file storage rather than writing and reading PDFs to a database."
-                            src="/Images/pdfIcon.png"
+                            linkTo="/pdfSplitter"
+                            imgSrc="/Images/pdfIcon.png"
                             altText="PDF Logo"
                         />
                         <ProjectTile
                             title="Body Weight Tracker"
                             p1="Full-stack web app for tracking body weight and body fat percentage over time. Great for diet monitoriing."
                             p2="Implements full CRUD functionality, as well as AJAX calls to RESTful Web APIs."
-                            src="/Images/weightTrackerIcon.jpg"
+                            linkTo=""
+                            imgSrc="/Images/weightTrackerIcon.jpg"
                             altText="Plot Icon"
                             isCircleImage={true}
                         />
