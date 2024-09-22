@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Typed from 'typed.js'
 import SkillTile from './SkillTile';
-//import $ from 'jquery';
+import ProjectTile from './ProjectTile';
+import ResumeTile from './ResumeTile';
+import AboutMeSection from './AboutSection';
 
 export class Home extends Component {
     static displayName = Home.name;
@@ -51,23 +53,8 @@ export class Home extends Component {
 
                 <div id="aboutContainer" className="pageDividerBox grayBackground">
                     <div className="row h-100 align-items-center">
-                        <div className="col-6 text-center">
-                            <h1 className="gradientText">About</h1>
-                            <p className="h3 p-3 textLeft marginLeft10">
-                                Hi! My name's Brandon and welcome to my website. I'm a full-stack developer who specializes in the backend. I enjoy anything coding related,
-                                and have a passion for implementing functionality and exploring new technologies.
-                                This web app acts as both my portofolio, as well as my personal playground to try new technologies, techniques, and explore the unkown.
-                                This site was built with ASP.NET Core Web API and ReactJS, and runs on an Azure app service. This site also uses the following technologies: Entity Framework Core, Bootstrap, AJAX, etc...
-                                When you visit each of my projects you will find a description of its purpose and any lessons learned.
-                                Thank you for taking the time to explore my work, and enjoy! Also feel free to take a look at my resume.
-                            </p>
-                        </div>
-                        <div className="col-6 text-center">
-                            <a className="grayLink text-center mh-80" href="/Documents/Resume-BrandonOchia.pdf" target="_blank">
-                                <img className="borderRadius20 grayScaleTillHover img-fluid" src="/Images/resumeIcon.png" alt="Resume Icon" />
-                                <p className="marginTop10">View Resume <span className="fas fa-arrow-right"></span></p>
-                            </a>
-                        </div>
+                        <AboutMeSection />
+                        <ResumeTile />
                     </div>
                 </div>
 
@@ -79,43 +66,21 @@ export class Home extends Component {
                     </div>
 
                     <div className="d-flex flex-row flex-wrap justify-content-around h-60 w-100">
-
-                        <div className="projectBox">
-                            <div className="projectBoxMedia onTop row">
-                                <div className="col-5 align-self-center mh-100">
-                                    <a href="">
-                                        <img className="img-fluid grayScaleTillHover" src="/Images/pdfIcon.png" alt="PDF Logo" />
-                                    </a>
-                                </div>
-                                <div className="col-7 h-100 mh-100">
-                                    <div className="projectBoxDescription mh-100">
-                                        <h3 className="gradientText">PDF Splitter</h3>
-                                        <p>Full-stack web app that allows for splitting PDFs in number of different ways. </p>
-                                        <p>Makes use of file storage rather than writing and reading PDFs to a database.</p>
-                                        <a className="grayLink" href="">Go see project  <span className="fas fa-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="projectBox">
-                            <div className="projectBoxMedia onTop row">
-                                <div className="col-5 align-self-center mh-100">
-                                    <a href="">
-                                        <img className="img-fluid circleImage padding10 grayScaleTillHover" src="/Images/weightTrackerIcon.jpg" alt="Plot Icon" />
-                                    </a>
-                                </div>
-                                <div className="col-7 h-100 mh-100">
-                                    <div className="projectBoxDescription mh-100">
-                                        <h3 className="gradientText">Body Weight Tracker</h3>
-                                        <p>Full-stack web app for tracking body weight and body fat percentage over time. Great for diet monitoriing.</p>
-                                        <p>Implements full CRUD functionality, as well as AJAX calls to RESTful Web APIs.</p>
-                                        <a className="grayLink" href="">Go see project  <span className="fas fa-arrow-right"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div >
-
+                        <ProjectTile
+                            title="PDF Splitter"
+                            p1="Full-stack web app that allows for splitting PDFs in number of different ways."
+                            p2="Makes use of file storage rather than writing and reading PDFs to a database."
+                            src="/Images/pdfIcon.png"
+                            altText="PDF Logo"
+                        />
+                        <ProjectTile
+                            title="Body Weight Tracker"
+                            p1="Full-stack web app for tracking body weight and body fat percentage over time. Great for diet monitoriing."
+                            p2="Implements full CRUD functionality, as well as AJAX calls to RESTful Web APIs."
+                            src="/Images/weightTrackerIcon.jpg"
+                            altText="Plot Icon"
+                            isCircleImage={true}
+                        />
                     </div >
                 </div >
 
