@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Typed from 'typed.js'
+//import $ from 'jquery';
 
 export class Home extends Component {
     static displayName = Home.name;
