@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Typed from 'typed.js'
-import SkillTile from './SkillTile';
-import ProjectTile from './ProjectTile';
-import ResumeTile from './ResumeTile';
-import AboutMeSection from './AboutSection';
+import SkillTile from '../components/SkillTile';
+import ProjectTile from '../components/ProjectTile';
+import ResumeTile from '../components/ResumeTile';
+import AboutMeSection from '../components/AboutSection';
 
 export class Home extends Component {
     static displayName = Home.name;

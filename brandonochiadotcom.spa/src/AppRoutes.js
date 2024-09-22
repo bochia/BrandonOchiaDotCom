@@ -1,5 +1,5 @@
-import { BodyComposition } from "./components/BodyComposition";
-import { Home } from "./components/Home";
+import { BodyComposition } from "./pages/BodyComposition";
+import { Home } from "./pages/Home";
 
 const AppRoutes = [
     {
