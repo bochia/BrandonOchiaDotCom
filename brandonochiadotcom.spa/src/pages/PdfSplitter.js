@@ -48,10 +48,6 @@ function PdfSplitter() {
             }).catch(error => {
                 alert('There was an error with the download:');
             });;
-
-            ////const data = response.json();
-            ////console.log('API response:', data);
-            //alert(data);
         } catch (error) {
             alert('made it to the try catch alert.');
             console.error('Error:', error);
@@ -79,7 +75,6 @@ function PdfSplitter() {
             inputPlaceholderText = 'Ex: 3';
         }
 
-        //TODO: Look up a boostrap class for a file input.
         //TODO: need to have the split button disabled if there isnt exactly 1 file selected.
         //TODO: make it so interval can only be a number input.
         inputHtml = (
@@ -91,7 +86,6 @@ function PdfSplitter() {
         );
     }
 
-    //TODO: mabye the UI needs to be in a different order
     return (
         <div>
             <h1>PDF Splitter</h1>
