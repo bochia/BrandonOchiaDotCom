@@ -85,8 +85,6 @@ function PdfSplitter() {
             <div style={formStyle}>
                 <label>{inputLabelText}</label>
                 <input class="form-control" type='text' placeholder={inputPlaceholderText} onChange={handleInputChange}></input>
-                <label>Choose a file:</label>
-                <input class="form-control" type='file' accept="application/pdf" ref={fileRef} />
                 <button class="btn btn-primary" onClick={submitToApi} disabled={!selectedOption}>Split PDF</button>
             </div>
         );
@@ -99,7 +97,9 @@ function PdfSplitter() {
             <p>This web app also uses the nuget package that I created.</p>
             <br />
             <div style={formStyle}>
-                <label>Split by:</label>
+                <label>Choose a file:</label>
+                <input class="form-control" type='file' accept="application/pdf" ref={fileRef} />
+                <label>Split Type:</label>
                 <select class="form-select" id="dropdown" value={selectedOption} onChange={handleSelectChange}>
                     <option value="">--Please choose an option--</option>
                     <option value="1">Range</option>

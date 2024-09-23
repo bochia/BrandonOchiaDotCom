@@ -7,7 +7,6 @@ function ProjectTile({ title, p1, p2, linkTo, imgSrc, altText, isCircleImage = f
     }
 
     let linkHtml;
-
     if (!workInProgress) {
         linkHtml = <a className="grayLink" href={linkTo}>Go see project  <span className="fas fa-arrow-right"></span></a>;
     }
