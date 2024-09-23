@@ -15,7 +15,7 @@ function ProjectTile({ title, p1, p2, linkTo, imgSrc, altText, isCircleImage = f
         <div className="projectBox">
             <div className="projectBoxMedia onTop row">
                 <div className="col-5 align-self-center mh-100">
-                    <a href="">
+                    <a href={linkTo}>
                         <img className={imgClassName} src={imgSrc} alt={altText} />
                     </a>
                 </div>

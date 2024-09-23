@@ -44,6 +44,7 @@ function PdfSplitter() {
 
                 // Clean up and revoke the object URL after the download starts
                 window.URL.revokeObjectURL(url);
+                alert('Download has finished, check your downloads folder!');
             }).catch(error => {
                 alert('There was an error with the download:');
             });;

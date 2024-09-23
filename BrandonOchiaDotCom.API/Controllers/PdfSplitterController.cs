@@ -88,6 +88,7 @@
                     int i = 1;
                     foreach (Stream fileStream in fileStreams)
                     {
+                        //TODO: use the name from the file uploaded to create the name for this.
                         // Create a new entry for each stream in the zip archive
                         var zipEntry = zipArchive.CreateEntry($"SpliResult_{i}.pdf");
 
