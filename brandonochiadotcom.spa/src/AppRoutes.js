@@ -1,6 +1,6 @@
 import { BodyComposition } from "./pages/BodyComposition";
 import { Home } from "./pages/Home";
-import PdfSplitter from "./pages/PdfSplitter";
+import PdfSplitterContainer from "./pages/pdfSplitter/PdfSplitterContainer";
 
 const AppRoutes = [
     {
@@ -9,7 +9,7 @@ const AppRoutes = [
     },
     {
         path: '/pdfSplitter',
-        element: <PdfSplitter />
+        element: <PdfSplitterContainer />
     },
     {
         path: '/bodyComposition',
