@@ -1,7 +1,7 @@
 
 import styles from './PdfSplitter.module.css';
 
-// This is the presentation componennt.
+// This is the presentational componennt.
 function PdfSplitter({ selectedOption, fileRef, inputRangeOrInterval, selectChangeHandler, inputChangeHandler, submitToApiHandler }) {
 
     let inputLabelText;
@@ -32,12 +32,12 @@ function PdfSplitter({ selectedOption, fileRef, inputRangeOrInterval, selectChan
         <div>
             <h1>PDF Splitter</h1>
             <p>
-                The back-end for this page utilizes a PDF processor nuget package that I created and deployed myself.
+                The backend for this page utilizes a PDF processor nuget package that I created and deployed myself.
                 The package is called "PDFTools.SplitMerge"" and allows for splitting/merging PDFs.
                 It contains class implementations that allow for processing PDFs in memory or by using file storage, whichever you prefer
             </p>
-            <a class="btn btn-primary me-2" href="https://www.nuget.org/packages/PdfTools.SplitMerge/">Nuget Package</a>
-            <a class="btn btn-primary" href="https://github.com/bochia/PDFToolsCSharp">GitHub Source Code</a><br />
+            <a class="btn btn-primary me-2" href="https://www.nuget.org/packages/PdfTools.SplitMerge/" target="_blank" rel="noreferrer">Nuget Package</a>
+            <a class="btn btn-primary" href="https://github.com/bochia/PDFToolsCSharp" target="_blank" rel="noreferrer">GitHub Source Code</a><br />
             <br />
             <div className={styles.formStyle}>
                 <label><b>Choose a file:</b></label>
