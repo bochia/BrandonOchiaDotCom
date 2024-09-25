@@ -1,4 +1,5 @@
 import buildImageUrl from '../utils/imageUrlBuilder';
+import { Link } from 'react-router-dom';
 
 function ProjectTile({ title, p1, p2, linkTo, imageNameWithExtension, altText, isCircleImage = false, workInProgress = false }) {
     let imgClassName = "img-fluid grayScaleTillHover";
@@ -10,18 +11,19 @@ function ProjectTile({ title, p1, p2, linkTo, imageNameWithExtension, altText, i
         imgClassName = "img-fluid circleImage padding10 grayScaleTillHover";
     }
 
+    //TODO: If project not ready want to have text that says, coming soon or something like that.
     let linkHtml;
     if (!workInProgress) {
-        linkHtml = <a className="grayLink" href={linkTo}>Go see project  <span className="fas fa-arrow-right"></span></a>;
+        linkHtml = <Link className="grayLink" to={linkTo}>Go see project  <span className="fas fa-arrow-right"></span></Link>
     }
 
     return (
         <div className="projectBox">
             <div className="projectBoxMedia onTop row">
                 <div className="col-5 align-self-center mh-100">
-                    <a href={linkTo}>
+                    <Link to={linkTo}>
                         <img className={imgClassName} src={imgSrc} alt={altText} />
-                    </a>
+                    </Link>
                 </div>
                 <div className="col-7 h-100 mh-100">
                     <div className="projectBoxDescription mh-100">
