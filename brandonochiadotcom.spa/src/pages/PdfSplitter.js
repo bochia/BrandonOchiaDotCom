@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 function PdfSplitter() {
     const [selectedOption, setSelectedOption] = useState('');
     const [inputRangeOrInterval, setInputRangeOrInterval] = useState('');
@@ -29,14 +30,14 @@ function PdfSplitter() {
             // call PDF splitter endpoint
             fetch(`${process.env.REACT_APP_API_BASE_URL}/PdfSplitter/split/${selectedOption}?inputRangeOrInterval=${inputRangeOrInterval}`, {
                 method: 'POST',
-                 body: formData,
+                body: formData,
             }).then((response) => {
                 if (!response.ok) {
                     throw new Error('Call to PDF splitter endpoint failed.');
                 }
 
                 // Get the response as a Blob
-                return response.blob(); 
+                return response.blob();
             }).then(blob => {
                 // Create a URL for the Blob
                 const url = window.URL.createObjectURL(blob);
@@ -78,17 +79,17 @@ function PdfSplitter() {
     if (selectedOption) {
         if (selectedOption === "1") {
             // range option
-            inputLabelText = 'Put the page ranges you want here.';
+            inputLabelText = 'Put the page ranges you want here:';
             inputPlaceholderText = 'Ex: 1,5-10,12...';
         } else if (selectedOption === "2") {
-            inputLabelText = 'Put the interval you want to use here.';
+            inputLabelText = 'Put the interval you want to use here:';
             inputPlaceholderText = 'Ex: 3';
         }
 
         //TODO: make it so interval can only be a number input.
         inputHtml = (
             <div style={formStyle}>
-                <label>{inputLabelText}</label>
+                <label><b>{inputLabelText}</b></label>
                 <input class="form-control" type='text' placeholder={inputPlaceholderText} onChange={handleInputChange}></input>
                 <button class="btn btn-primary" onClick={submitToApi} disabled={!selectedOption}>Split PDF</button>
             </div>
@@ -99,12 +100,18 @@ function PdfSplitter() {
     return (
         <div>
             <h1>PDF Splitter</h1>
-            <p>This web app also uses the nuget package that I created.</p>
+            <p>
+                The back-end for this page utilizes a PDF processor nuget package that I created and deployed myself.
+                The package is called "PDFTools.SplitMerge"" and allows for splitting/merging PDFs.
+                It contains class implementations that allow for processing PDFs in memory or by using file storage, whichever you prefer
+            </p>
+            <a class="btn btn-primary me-2" href="https://www.nuget.org/packages/PdfTools.SplitMerge/">Nuget Package</a>
+            <a class="btn btn-primary" href="https://github.com/bochia/PDFToolsCSharp">GitHub Source Code</a><br />
             <br />
             <div style={formStyle}>
-                <label>Choose a file:</label>
+                <label><b>Choose a file:</b></label>
                 <input class="form-control" type='file' accept="application/pdf" ref={fileRef} />
-                <label>Split Type:</label>
+                <label><b>Split Type:</b></label>
                 <select class="form-select" id="dropdown" value={selectedOption} onChange={handleSelectChange}>
                     <option value="">--Please choose an option--</option>
                     <option value="1">Range</option>

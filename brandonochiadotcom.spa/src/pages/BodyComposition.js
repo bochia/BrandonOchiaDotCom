@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//TODO: Update this to a function component like you have done for PdfSplitter.
 export class BodyComposition extends Component {
     static displayName = BodyComposition.name;
 

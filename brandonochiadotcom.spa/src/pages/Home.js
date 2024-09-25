@@ -6,6 +6,7 @@ import ResumeTile from '../components/ResumeTile';
 import AboutMeSection from '../components/AboutSection';
 import buildImageUrl from '../utils/imageUrlBuilder';
 
+//TODO: Update this to a function component like you have done for PdfSplitter.
 export class Home extends Component {
     static displayName = Home.name;
 
@@ -70,7 +71,7 @@ export class Home extends Component {
                         <ProjectTile
                             title="PDF Splitter"
                             p1="Full-stack web app that allows for splitting PDFs in number of different ways."
-                            p2="Makes use of file storage rather than writing and reading PDFs to a database."
+                            p2="Makes use of a PDF processor nuget package that I personally implemented and released."
                             linkTo="/pdfSplitter"
                             imageNameWithExtension="pdfIcon.png"
                             altText="PDF Logo"
