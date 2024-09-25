@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "dotenv": "^16.4.5",
     "eslint-config-react-app": "7.0.1",
     "jest-editor-support": "30.3.1"
   }

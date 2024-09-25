@@ -1,5 +1,9 @@
-function ProjectTile({ title, p1, p2, linkTo, imgSrc, altText, isCircleImage = false, workInProgress = false }) {
+import buildImageUrl from '../utils/imageUrlBuilder';
+
+function ProjectTile({ title, p1, p2, linkTo, imageNameWithExtension, altText, isCircleImage = false, workInProgress = false }) {
     let imgClassName = "img-fluid grayScaleTillHover";
+
+    const imgSrc = buildImageUrl(imageNameWithExtension);
 
     // if circle image then add some extra styling.
     if (isCircleImage) {
