@@ -3,6 +3,7 @@ function buildImageUrl(imageNameWithExtension) {
         console.log('REACT_APP_BLOB_STORAGE_URL cannot be undefined or empty string.');
     }
 
+    //TODO: Need to get this working in production.
     return `${process.env.REACT_APP_BLOB_STORAGE_URL}/images/${imageNameWithExtension}`;
 }
 
