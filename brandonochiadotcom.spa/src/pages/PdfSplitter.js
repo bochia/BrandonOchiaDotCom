@@ -21,7 +21,7 @@ function PdfSplitter() {
             const formData = new FormData();
             formData.append('files', fileRef.current.files[0]);
 
-            const response = fetch(`https://localhost:7247/api/PdfSplitter/split/${selectedOption}?inputRangeOrInterval=${inputRangeOrInterval}`, {
+            fetch(`https://localhost:7247/api/PdfSplitter/split/${selectedOption}?inputRangeOrInterval=${inputRangeOrInterval}`, {
                 method: 'POST',
                  body: formData,
             }).then((response) => {
