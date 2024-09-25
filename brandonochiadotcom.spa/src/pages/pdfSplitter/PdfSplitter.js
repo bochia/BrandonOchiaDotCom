@@ -34,7 +34,7 @@ function PdfSplitter({ selectedOption, fileRef, inputRangeOrInterval, selectChan
             <p>
                 The backend for this page utilizes a PDF processor nuget package that I created and deployed myself.
                 The package is called "PDFTools.SplitMerge"" and allows for splitting/merging PDFs.
-                It contains class implementations that allow for processing PDFs in memory or by using file storage, whichever you prefer
+                It contains class implementations that allow for processing PDFs in memory or by using file storage, whichever you prefer.
             </p>
             <a class="btn btn-primary me-2" href="https://www.nuget.org/packages/PdfTools.SplitMerge/" target="_blank" rel="noreferrer">Nuget Package</a>
             <a class="btn btn-primary" href="https://github.com/bochia/PDFToolsCSharp" target="_blank" rel="noreferrer">GitHub Source Code</a><br />
