@@ -4,7 +4,9 @@ import SkillTile from '../components/SkillTile';
 import ProjectTile from '../components/ProjectTile';
 import ResumeTile from '../components/ResumeTile';
 import AboutMeSection from '../components/AboutSection';
+import buildImageUrl from '../utils/imageUrlBuilder';
 
+//TODO: Update this to a function component like you have done for PdfSplitter.
 export class Home extends Component {
     static displayName = Home.name;
 
@@ -36,7 +38,6 @@ export class Home extends Component {
     render() {
         return (
             <div className="container-1 fullWidth whiteFont">
-
                 <div id="particleContainer" className="pageDividerBox">
                     <div className="headingContainer d-flex overlay">
                         <div className="headingBox-1 m-5">
@@ -44,7 +45,7 @@ export class Home extends Component {
                             <p id="myDescriptors" className="visible-lg-inline typed-cursor h4 d-inline"></p><br /><br />
                         </div>
                         <div className="headingBox-2 align-self-center">
-                            <img className="circleImage floatRight headshotPic" src="/images/headshot.jpg" alt="Headshot Photo" />
+                            <img className="circleImage floatRight headshotPic" src={buildImageUrl('myHeadshot.jpg')} alt="Headshot" />
                         </div>
                     </div>
 
@@ -70,9 +71,9 @@ export class Home extends Component {
                         <ProjectTile
                             title="PDF Splitter"
                             p1="Full-stack web app that allows for splitting PDFs in number of different ways."
-                            p2="Makes use of file storage rather than writing and reading PDFs to a database."
+                            p2="Makes use of a PDF processor nuget package that I personally implemented and released."
                             linkTo="/pdfSplitter"
-                            imgSrc="/Images/pdfIcon.png"
+                            imageNameWithExtension="pdfIcon.png"
                             altText="PDF Logo"
                         />
                         <ProjectTile
@@ -80,7 +81,7 @@ export class Home extends Component {
                             p1="Full-stack web app for tracking body weight and body fat percentage over time. Great for diet monitoriing."
                             p2="Implements full CRUD functionality, as well as AJAX calls to RESTful Web APIs."
                             linkTo=""
-                            imgSrc="/Images/weightTrackerIcon.jpg"
+                            imageNameWithExtension="weightTrackerIcon.jpg"
                             altText="Plot Icon"
                             isCircleImage={true}
                             workInProgress={true}
@@ -94,13 +95,13 @@ export class Home extends Component {
                         <h1>S k i l l s    &amp;    T e c h n o l o g i e s</h1>
                     </div>
                     <div className="d-flex flex-row flex-wrap justify-content-center mh-90">
-                        <SkillTile text="Web API" src="/Images/aspNetCoreLogo.png" width={10} />
-                        <SkillTile text="Azure" src="/Images/azureLogo.png" width={15} />
-                        <SkillTile text="SQL" src="/Images/microsoftSqlServerIcon.png" width={10} />
-                        <SkillTile text="Entity Framework Core" src="/Images/entityFrameworkIcon.png" width={20} />
-                        <SkillTile text="React.js" src="/Images/reactLogo.png" width={10} />
-                        <SkillTile text="Visual Studio" src="/Images/visualStudioLogo.png" width={20} />
-                        <SkillTile text="Unit Testing" src="/Images/unitTestingIcon.png" width={10} />
+                        <SkillTile text="Web API" imageNameWithExtension="aspNetCoreLogo.png" width={10} />
+                        <SkillTile text="Azure" imageNameWithExtension="azureLogo.png" width={15} />
+                        <SkillTile text="SQL" imageNameWithExtension="microsoftSqlServerIcon.png" width={10} />
+                        <SkillTile text="Entity Framework Core" imageNameWithExtension="entityFrameworkIcon.png" width={20} />
+                        <SkillTile text="React.js" imageNameWithExtension ="reactLogo.png" width={10} />
+                        <SkillTile text="Visual Studio" imageNameWithExtension="visualStudioLogo.png" width={20} />
+                        <SkillTile text="Unit Testing" imageNameWithExtension="unitTestingIcon.png" width={10} />
                     </div>
                     <br /><br />
                 </div>

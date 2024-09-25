@@ -27,6 +27,7 @@
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Split(int splitType, [FromQuery] string inputRangeOrInterval, IList<IFormFile> files)
         {
+            // guard clauses
             if (splitType != (int)SplitTypes.Range && splitType != (int)SplitTypes.Interval)
             {
                 return BadRequest($"Incorrect value for {nameof(splitType)} - must either be {SplitTypes.Range} or {SplitTypes.Interval}.");
@@ -47,6 +48,7 @@
                 return BadRequest("Cannot upload more than 1 file.");
             }
 
+            // main logic
             IFormFile formFile = files[0];
 
             using (Stream fileStream = formFile.OpenReadStream())

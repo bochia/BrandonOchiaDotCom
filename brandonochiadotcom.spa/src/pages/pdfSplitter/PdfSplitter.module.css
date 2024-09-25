@@ -1,0 +1,5 @@
+.formStyle {
+    display: flex;
+    flex-direction: column; /* Make elements stack vertically */
+    gap: 10px; /* Add spacing between each element */
+}
