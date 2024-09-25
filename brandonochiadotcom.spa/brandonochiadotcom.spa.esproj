@@ -11,4 +11,8 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\build</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="public\images\" />
+    <Folder Include="public\documents\" />
+  </ItemGroup>
 </Project>

@@ -16,3 +16,741 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.typed-cursor {
+    font-size: 24px;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+
+/*COPY PASTED CSS FROM OLD APPLICATION HERE.*/
+
+:root {
+    --main-bg-color-1: #181818;
+    --main-bg-color-2: black;
+    --accentTextColor: #ec0b80;
+    --border-radius: 30px;
+}
+
+.glowing-border {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+}
+
+    .glowing-border:focus {
+        outline: none;
+        border-color: #9ecaed;
+        box-shadow: 0 0 10px #9ecaed; /*light blue*/
+    }
+
+
+.full {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.centeredTableCell {
+    width: 5%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.marginBottom5 {
+    margin-bottom: 5px;
+}
+
+.marginBottom10 {
+    margin-bottom: 10px;
+}
+
+.marginBottom15 {
+    margin-bottom: 15px;
+}
+
+.marginBottom20 {
+    margin-bottom: 20px;
+}
+
+.marginTop5 {
+    margin-top: 5px;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginRight5 {
+    margin-right: 5px;
+}
+
+.marginright1Percent {
+    margin-right: 1%;
+}
+
+.marginright5Percent {
+    margin-right: 5%;
+}
+
+.marginright10Percent {
+    margin-right: 10%;
+}
+
+.marginright20Percent {
+    margin-right: 20%;
+}
+
+.marginright30Percent {
+    margin-right: 30%;
+}
+
+.marginLeft10 {
+    margin-left: 10px;
+}
+
+.marginLeft15 {
+    margin-left: 15px;
+}
+
+.marginLeft20 {
+    margin-left: 20px;
+}
+
+.marginLeft25 {
+    margin-left: 25px;
+}
+
+.marginLeft30 {
+    margin-left: 30px;
+}
+
+.marginLeft35 {
+    margin-left: 35px;
+}
+
+.marginLeft40 {
+    margin-left: 40px;
+}
+
+.marginLeft45 {
+    margin-left: 45px;
+}
+
+.marginLeft50 {
+    margin-left: 50px;
+}
+
+.marginLeft60 {
+    margin-left: 60px;
+}
+
+.marginLeft70 {
+    margin-left: 70px;
+}
+
+.marginLeft80 {
+    margin-left: 80px;
+}
+
+.marginLeft90 {
+    margin-left: 90px;
+}
+
+.marginLeft100 {
+    margin-left: 100px;
+}
+
+.marginLeft1Percent {
+    margin-left: 1%;
+}
+
+.marginLeft5Percent {
+    margin-left: 5%;
+}
+
+.marginLeft10Percent {
+    margin-left: 10%;
+}
+
+.marginLeft20Percent {
+    margin-left: 20%;
+}
+
+.marginLeft30Percent {
+    margin-left: 30%;
+}
+
+.padding2 {
+    padding: 2px;
+}
+
+.padding5 {
+    padding: 5px;
+}
+
+.padding10 {
+    padding: 10px;
+}
+
+.dropDownList {
+    background-color: black;
+}
+
+.dropDownListItem {
+    background-color: black;
+    color: white;
+    border-style: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+    .dropDownListItem:hover {
+        color: white;
+        display: block;
+        width: 100%;
+        text-align: left;
+        border-left: 4px solid #ec0b80;
+    }
+
+.fullWidth {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+.width10Percent {
+    width: 10%
+}
+
+.width20Percent {
+    width: 20%;
+}
+
+.width30Percent {
+    width: 30%;
+}
+
+.width40Percent {
+    width: 40%;
+}
+
+.width50Percent {
+    width: 50%;
+}
+
+.width60Percent {
+    width: 60%;
+}
+
+.width70Percent {
+    width: 70%;
+}
+
+.width80Percent {
+    width: 80%;
+}
+
+.width90Percent {
+    width: 90%;
+}
+
+.width100Percent {
+    width: 100%;
+}
+
+.height10Percent {
+    height: 10%
+}
+
+.height20Percent {
+    height: 20%;
+}
+
+.height30Percent {
+    height: 30%;
+}
+
+.height40Percent {
+    height: 40%;
+}
+
+.height50Percent {
+    height: 50%;
+}
+
+.height60Percent {
+    height: 60%;
+}
+
+.height70Percent {
+    height: 70%;
+}
+
+.height80Percent {
+    height: 80%;
+}
+
+.height90Percent {
+    height: 90%;
+}
+
+.height100Percent {
+    height: 100%;
+}
+
+.grayBackground {
+    background-color: var(--main-bg-color-1);
+}
+
+.blackBackground {
+    background-color: var(--main-bg-color-2);
+}
+
+.container-1 {
+    /*display: flex;
+    flex-direction: column;*/
+    /*height: 2500px;
+    min-height: 2500px;
+    max-height: 4000px;*/
+    margin: 0px;
+    height: auto;
+    background-color: black;
+}
+
+#particleContainer {
+    position: relative;
+    z-index: 2;
+    min-height: 600px;
+}
+
+#aboutContainer {
+}
+
+#projectsContainer {
+    min-height: 550px;
+}
+
+#skillsContainer {
+}
+
+.pageDividerBox {
+    height: auto;
+    overflow: visible;
+    z-index: 2;
+    width: 100%;
+    min-width: 380px;
+}
+
+.onTop {
+    z-index: 100
+}
+
+.whiteFont {
+    color: white;
+}
+
+#gradientBackgroundContainer {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    padding: 10px;
+    height: 60%;
+    width: 80%;
+    z-index: 3;
+    border-radius: var(--border-radius);
+}
+
+.headingContainer {
+    height: 60%;
+    width: 80%;
+}
+
+.headingBox-1 {
+    flex: 3;
+}
+
+.headingBox-2 {
+    flex: 1;
+}
+
+.redErrorText {
+    color: red;
+}
+
+input {
+    color: black;
+}
+
+#skillsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.skillBox {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 4px;
+    border-color: var(--accentTextColor);
+    margin: 5px;
+}
+
+    .skillBox:hover {
+        background: var(--accentTextColor);
+        background-position: left bottom;
+        transition: background-color linear 0.5s;
+    }
+
+.skillIcon {
+    flex: 3
+}
+
+.skillDescription {
+    flex: 1;
+}
+
+.gradientBackground {
+    background: rgb(236,11,128);
+    background: linear-gradient(135deg, rgba(236,11,128,1) 0%, rgba(240,80,53,1) 100%);
+}
+
+.gradientText {
+    background: linear-gradient(135deg, rgba(236,11,128,1) 0%, rgba(240,80,53,1) 100%);
+    -webkit-background-clip: text; /*works in chrome & edge*/
+    -webkit-text-fill-color: transparent;
+}
+
+.Transparency30Percent {
+    opacity: 0.7;
+}
+
+.accentTextColor {
+    color: var(--accentTextColor);
+}
+
+.accentColorOnButtonClick {
+    background-color: white;
+}
+
+    .accentColorOnButtonClick:active {
+        background-color: var(--accentTextColor);
+    }
+
+.borderRadius20 {
+    border-radius: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    z-index: 5;
+}
+
+.circleImage {
+    border-radius: 50%;
+}
+
+.grayTransparentBackground {
+    opacity: 0.7;
+    background-color: var(--main-bg-color-1);
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius)
+}
+
+.projectBox {
+    margin: 10px;
+    min-width: 500px;
+    max-height: 350px;
+    background-color: var(--main-bg-color-1);
+    border-radius: var(--border-radius);
+    width: 30%
+}
+
+.projectBoxMedia {
+    border-radius: var(--border-radius);
+    /*position: absolute;*/ /*THIS IS THE ROOT OF ALL EVIL WAS STOPPING MY BOXES FROM WRAPPING*/
+    height: 100%;
+    max-height: 100%
+}
+
+.projectBoxDescription {
+    padding: 30px;
+}
+
+.grayLink {
+    color: grey;
+    text-decoration: none;
+}
+
+    .grayLink:hover {
+        color: var(--accentTextColor);
+        text-decoration: none;
+    }
+
+.blackLink {
+    color: black
+}
+
+    .blackLink:hover {
+        color: blue;
+        text-decoration: none;
+    }
+
+
+.typed-cursor {
+    font-size: 24px;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+.grayScale {
+    filter: grayscale(1);
+}
+
+.grayScaleTillHover {
+    filter: grayscale(1);
+    transition: filter 1s;
+}
+
+    .grayScaleTillHover:hover {
+        filter: grayscale(0);
+    }
+
+.w-10 {
+    width: 10%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.h-10 {
+    height: 10%;
+}
+
+.h-20 {
+    height: 20%;
+}
+
+.h-30 {
+    height: 30%;
+}
+
+.h-40 {
+    height: 40%;
+}
+
+.h-60 {
+    height: 60%;
+}
+
+.h-70 {
+    height: 70%;
+}
+
+.h-80 {
+    height: 80%;
+}
+
+.h-90 {
+    height: 90%;
+}
+
+.mw-10 {
+    max-width: 10%;
+}
+
+.mw-20 {
+    max-width: 20%;
+}
+
+.mw-30 {
+    max-width: 30%;
+}
+
+.mw-40 {
+    max-width: 40%;
+}
+
+.mw-50 {
+    max-width: 50%;
+}
+
+.mw-60 {
+    max-width: 60%;
+}
+
+.mw-70 {
+    max-width: 70%;
+}
+
+.mw-80 {
+    max-width: 80%;
+}
+
+.mw-90 {
+    max-width: 90%;
+}
+
+.mh-10 {
+    max-height: 10%;
+}
+
+.mh-20 {
+    max-height: 20%;
+}
+
+.mh-30 {
+    max-height: 30%;
+}
+
+.mh-40 {
+    max-height: 40%;
+}
+
+.mh-50 {
+    max-height: 50%;
+}
+
+.mh-60 {
+    max-height: 60%;
+}
+
+.mh-70 {
+    max-height: 70%;
+}
+
+.mh-80 {
+    max-height: 80%;
+}
+
+.mh-90 {
+    max-height: 90%;
+}
+
+/*Super important for responsive design. 
+        Otherwise things keep scaling down and contents with fixed sizes will overflow.
+        For example - text has fixed size so it will keep scaling down.
+
+*/
+
+.minWidth300 {
+    min-width: 300px;
+}
+
+.minWidth400 {
+    min-width: 400px;
+}
+
+.minHeight100 {
+    min-width: 300px;
+}
+
+.flexGrow2 {
+    flex-grow: 2;
+}
+
+.floatRight {
+    float: right;
+}
+
+.leftBorder {
+    border-left: 1px solid lightgray;
+}
+
+.paddingLeft50 {
+    padding-left: 50px;
+}
+
+
+.paddingLeft100 {
+    padding-left: 100px;
+}
+
+.navBarTextColor {
+    color: #c1cac2;
+}
+
+.navBarBackgroundColor {
+    background-color: #212529;
+}
+
+
+.pinkLink {
+    color: var(--accentTextColor);
+    text-decoration: none;
+}
+
+    .pinkLink:hover {
+        color: blue;
+        text-decoration: none;
+    }
+
+
+.height75px {
+    height: 75px;
+}
+
+.height120px {
+    height: 120px;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.headshotPic{
+    width: 450px;
+}

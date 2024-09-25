@@ -16,6 +16,7 @@
         {
             return table.AsQueryable();
         }
+        //CFR: change this to an int.
         public TEntity GetById(object id)
         {
             return table.Find(id);
@@ -29,6 +30,7 @@
             table.Attach(obj);
             dbContext.Entry(obj).State = EntityState.Modified;
         }
+        //CFR: change this to an int.
         public void Delete(object id)
         {
             TEntity existing = table.Find(id);

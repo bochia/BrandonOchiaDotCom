@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "apis1": {
+      "apiEndpoint": "https://brandonochiadotcomapi-api.azure-api.net/",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/BrandonOchiaDotComAPI-API/apis/BrandonOchiaDotComAPI",
+      "type": "apis.azure"
+    }
+  }
+}
