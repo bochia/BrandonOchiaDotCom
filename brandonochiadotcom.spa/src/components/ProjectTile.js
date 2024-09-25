@@ -15,6 +15,9 @@ function ProjectTile({ title, p1, p2, linkTo, imageNameWithExtension, altText, i
     let linkHtml;
     if (!workInProgress) {
         linkHtml = <Link className="grayLink" to={linkTo}>Go see project  <span className="fas fa-arrow-right"></span></Link>
+    } else {
+        //TODO: not actually a link rename this variable.
+        linkHtml = <b><p>COMING SOON!</p></b>
     }
 
     return (
