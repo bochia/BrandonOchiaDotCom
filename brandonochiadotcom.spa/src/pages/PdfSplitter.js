@@ -17,15 +17,26 @@ function PdfSplitter() {
 
     function submitToApi() {
         try {
-            //TODO: need to await the fetch.
+            // check api base url before making call
+            if (!process.env.REACT_APP_API_BASE_URL) {
+                throw new Error('REACT_APP_API_BASE_URL was invalid.');
+            }
+
+            // get file from the file input
             const formData = new FormData();
             formData.append('files', fileRef.current.files[0]);
 
-            fetch(`https://localhost:7247/api/PdfSplitter/split/${selectedOption}?inputRangeOrInterval=${inputRangeOrInterval}`, {
+            // call PDF splitter endpoint
+            fetch(`${process.env.REACT_APP_API_BASE_URL}/PdfSplitter/split/${selectedOption}?inputRangeOrInterval=${inputRangeOrInterval}`, {
                 method: 'POST',
                  body: formData,
             }).then((response) => {
-                return response.blob(); // Get the response as a Blob
+                if (!response.ok) {
+                    throw new Error('Call to PDF splitter endpoint failed.');
+                }
+
+                // Get the response as a Blob
+                return response.blob(); 
             }).then(blob => {
                 // Create a URL for the Blob
                 const url = window.URL.createObjectURL(blob);
@@ -45,12 +56,12 @@ function PdfSplitter() {
                 // Clean up and revoke the object URL after the download starts
                 window.URL.revokeObjectURL(url);
             }).catch(error => {
-                alert('There was an error with the download:');
+                const errorMessage = 'Ooops, something went wrong....There was an error with the splitting the PDF.';
+                console.log(errorMessage);
+                alert(errorMessage);
             });;
         } catch (error) {
-            alert('made it to the try catch alert.');
             console.error('Error:', error);
-            alert(`Error: ${error}`);
         }
     }
 
@@ -74,7 +85,6 @@ function PdfSplitter() {
             inputPlaceholderText = 'Ex: 3';
         }
 
-        //TODO: need to have the split button disabled if there isnt exactly 1 file selected.
         //TODO: make it so interval can only be a number input.
         inputHtml = (
             <div style={formStyle}>
@@ -85,6 +95,7 @@ function PdfSplitter() {
         );
     }
 
+    //TODO: Make a presentational component for this and render it here.
     return (
         <div>
             <h1>PDF Splitter</h1>
