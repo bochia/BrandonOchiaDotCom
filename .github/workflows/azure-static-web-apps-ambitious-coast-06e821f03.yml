@@ -32,6 +32,7 @@ jobs:
           api_location: "https://brandonochiadotcomapi.azurewebsites.net/api/" # Api source code path - optional
           output_location: "build" # Built app content directory - optional
         env: # Add environment variables here
+          REACT_APP_API_BASE_URL: https://brandonochiadotcomapi.azurewebsites.net/api
           REACT_APP_BLOB_STORAGE_URL: https://brandonochiastorage.blob.core.windows.net
           ###### End of Repository/Build Configurations ######
 
