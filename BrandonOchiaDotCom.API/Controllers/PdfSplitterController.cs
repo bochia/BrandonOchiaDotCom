@@ -86,7 +86,7 @@
                 // Create a new Zip archive in the memory stream
                 using (var zipArchive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
                 {
-                    // Iterate through the IEnumerable<Stream>
+                    // Iterate through the file streams.
                     int i = 1;
                     foreach (Stream fileStream in fileStreams)
                     {
@@ -102,6 +102,9 @@
 
                         i++;
                     }
+
+                    // important - need to do this otherwise zip file has "Unexpected end of data" errors.
+                    zipArchive.Dispose();
 
                     // Return the zip file
                     return File(memoryStream.ToArray(), "application/zip", "SplitPDFs.zip");
