@@ -324,11 +324,6 @@ code {
 }
 
 .container-1 {
-    /*display: flex;
-    flex-direction: column;*/
-    /*height: 2500px;
-    min-height: 2500px;
-    max-height: 4000px;*/
     margin: 0px;
     height: auto;
     background-color: black;
