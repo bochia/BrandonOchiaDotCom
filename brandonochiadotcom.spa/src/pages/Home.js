@@ -12,15 +12,15 @@ export class Home extends Component {
 
     componentDidMount() {
 
-        // there is no specific reason that its divided by 20 - just what looks good.
-        let calculateParticlesNumber = window.innerWidth / 20;
+        // there is no specific reason that its divided by 20 - just what happens to looks good.
+        let calculatedParticlesNumber = window.innerWidth / 20;
 
         // eslint-disable-next-line
         var particleContainer = $("#particleContainer").jParticle({
             background: "black",
             color: "#fff",
             resize: true,
-            particlesNumber: calculateParticlesNumber
+            particlesNumber: calculatedParticlesNumber
         });
 
         var options = {
