@@ -333,6 +333,7 @@ code {
     position: relative;
     z-index: 2;
     min-height: 600px;
+    overflow: hidden;
 }
 
 #aboutContainer {
