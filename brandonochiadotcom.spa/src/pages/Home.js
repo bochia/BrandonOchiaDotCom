@@ -45,7 +45,7 @@ export class Home extends Component {
                             <p id="myDescriptors" className="visible-lg-inline typed-cursor h4 d-inline"></p><br /><br />
                         </div>
                         <div className="headingBox-2 align-self-center">
-                            <img className="circleImage floatRight headshotPic" src={buildImageUrl('myHeadshot.jpg')} alt="Headshot" />
+                            {/*<img className="circleImage floatRight headshotPic" src={buildImageUrl('myHeadshot.jpg')} alt="Headshot" />*/}
                         </div>
                     </div>
 
