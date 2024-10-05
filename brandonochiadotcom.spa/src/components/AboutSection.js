@@ -1,8 +1,8 @@
 function AboutMeSection() {
     return (
-        <div className="col-6 text-center">
+        <div className="col-md-6 col-sm-12 text-center">
             <h1 className="gradientText">About Me</h1>
-            <p className="h3 p-3 textLeft marginLeft10">
+            <p className="fs-1 fs-md-2 fs-sm-5 p-3 textLeft marginLeft10">
                 My name's Brandon and welcome to my website. I'm a full-stack developer who specializes in the backend. I enjoy anything coding related,
                 and have a passion for building web apps and exploring new technologies.
                 This web app acts as both my portofolio, as well as my personal playground to try new technologies, techniques, and explore the unkown.
