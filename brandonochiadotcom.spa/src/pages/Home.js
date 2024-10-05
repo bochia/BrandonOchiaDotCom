@@ -68,10 +68,10 @@ export class Home extends Component {
                 <div id="projectsContainer" className="pageDividerBox blackBackground">
 
                     <div id="projectsTextContainer" className="gradientText minWidth300 w-100">
-                        <h1 className="mt-4 text-center">P r o j e c t s</h1>
+                        <h1 className="mt-4 text-center">Projects</h1>
                     </div>
 
-                    <div className="d-flex flex-row flex-wrap justify-content-around h-60 w-100">
+                    <div className="d-flex flex-row flex-wrap justify-content-around h-60 w-100 my-3">
                         <ProjectTile
                             title="PDF Splitter"
                             p1="Full-stack web app that allows for splitting PDFs in number of different ways."
@@ -96,7 +96,7 @@ export class Home extends Component {
 
                 <div id="skillsContainer" className="pageDividerBox grayBackground text-center">
                     <div className="mh-10 mt-4 gradientText">
-                        <h1>S k i l l s    &amp;    T e c h n o l o g i e s</h1>
+                        <h1>Skills    &amp;    Technologies</h1>
                     </div>
                     <div className="d-flex flex-row flex-wrap justify-content-center mh-90">
                         <SkillTile text="Web API" imageNameWithExtension="aspNetCoreLogo.png" width={10} />
