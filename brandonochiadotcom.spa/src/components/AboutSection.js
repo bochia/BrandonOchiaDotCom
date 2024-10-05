@@ -1,6 +1,6 @@
 function AboutMeSection() {
     return (
-        <div className="col-md-6 col-sm-12 text-center">
+        <div className="col-md-9 col-sm-12 text-center">
             <h1 className="gradientText">About Me</h1>
             <p className="fs-1 fs-md-2 fs-sm-5 p-3 textLeft marginLeft10">
                 My name's Brandon and welcome to my website. I'm a full-stack developer who specializes in the backend. I enjoy anything coding related,

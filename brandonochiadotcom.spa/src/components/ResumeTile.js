@@ -5,7 +5,7 @@ function ResumeTile() {
     const imgSrc = buildImageUrl('resumeIcon.png')
 
     return (
-        <div className="col-6 text-center">
+        <div className="col-md-3 col-sm-12 text-center">
             <a className="grayLink text-center mh-80" href={resumeSrc} target="_blank" rel="noreferrer">
                 <img className="borderRadius20 grayScaleTillHover img-fluid" src={imgSrc} alt="Resume Icon" />
                 <p className="marginTop10">View Resume <span className="fas fa-arrow-right"></span></p>
