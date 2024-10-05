@@ -473,7 +473,7 @@ input {
 
 .projectBox {
     margin: 10px;
-    min-width: 500px;
+    min-width: 350px;
     max-height: 350px;
     background-color: var(--main-bg-color-1);
     border-radius: var(--border-radius);
