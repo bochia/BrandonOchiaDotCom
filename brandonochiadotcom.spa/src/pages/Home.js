@@ -68,7 +68,7 @@ export class Home extends Component {
                 <div id="projectsContainer" className="pageDividerBox blackBackground">
 
                     <div id="projectsTextContainer" className="gradientText minWidth300 w-100">
-                        <h1 className="text-center">P r o j e c t s</h1>
+                        <h1 className="mt-4 text-center">P r o j e c t s</h1>
                     </div>
 
                     <div className="d-flex flex-row flex-wrap justify-content-around h-60 w-100">
@@ -95,7 +95,7 @@ export class Home extends Component {
 
 
                 <div id="skillsContainer" className="pageDividerBox grayBackground text-center">
-                    <div className="mh-10 gradientText">
+                    <div className="mh-10 mt-4 gradientText">
                         <h1>S k i l l s    &amp;    T e c h n o l o g i e s</h1>
                     </div>
                     <div className="d-flex flex-row flex-wrap justify-content-center mh-90">
