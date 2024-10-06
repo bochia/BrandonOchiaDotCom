@@ -9,11 +9,13 @@ import buildImageUrl from '../utils/imageUrlBuilder';
 //TODO: Update this to a function component like you have done for PdfSplitter.
 export class Home extends Component {
     static displayName = Home.name;
+    backgroundColor = 'grayBackground';
 
     componentDidMount() {
 
-        // there is no specific reason that its divided by 20 - just what happens to looks good.
-        let calculatedParticlesNumber = window.innerWidth / 20;
+        document.body.classList.add(this.backgroundColor);
+
+        let calculatedParticlesNumber = this.calculateNumberOfParticles(window.innerWidth);
 
         // eslint-disable-next-line
         var particleContainer = $("#particleContainer").jParticle({
@@ -37,6 +39,8 @@ export class Home extends Component {
     componentWillUnmount() {
         // Make sure to destroy Typed instance on unmounting to prevent memory leaks.
         this.typed.destroy();
+
+        document.body.classList.remove(this.backgroundColor);
     }
 
     render() {
@@ -112,5 +116,10 @@ export class Home extends Component {
 
             </div >
         );
+    }
+
+    calculateNumberOfParticles(windowWidth) {
+        // there is no specific reason that its divided by 20 - just what happens to looks good.
+        return windowWidth / 20;
     }
 }
