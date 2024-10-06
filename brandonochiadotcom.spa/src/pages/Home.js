@@ -9,14 +9,20 @@ import buildImageUrl from '../utils/imageUrlBuilder';
 //TODO: Update this to a function component like you have done for PdfSplitter.
 export class Home extends Component {
     static displayName = Home.name;
+    backgroundColor = 'grayBackground';
 
     componentDidMount() {
+
+        document.body.classList.add(this.backgroundColor);
+
+        let calculatedParticlesNumber = this.calculateNumberOfParticles(window.innerWidth);
 
         // eslint-disable-next-line
         var particleContainer = $("#particleContainer").jParticle({
             background: "black",
             color: "#fff",
-            resize: true
+            resize: true,
+            particlesNumber: calculatedParticlesNumber
         });
 
         var options = {
@@ -33,6 +39,8 @@ export class Home extends Component {
     componentWillUnmount() {
         // Make sure to destroy Typed instance on unmounting to prevent memory leaks.
         this.typed.destroy();
+
+        document.body.classList.remove(this.backgroundColor);
     }
 
     render() {
@@ -45,7 +53,7 @@ export class Home extends Component {
                             <p id="myDescriptors" className="visible-lg-inline typed-cursor h4 d-inline"></p><br /><br />
                         </div>
                         <div className="headingBox-2 align-self-center">
-                            <img className="circleImage floatRight headshotPic" src={buildImageUrl('myHeadshot.jpg')} alt="Headshot" />
+                            {/*<img className="circleImage floatRight headshotPic" src={buildImageUrl('myHeadshot.jpg')} alt="Headshot" />*/}
                         </div>
                     </div>
 
@@ -64,10 +72,10 @@ export class Home extends Component {
                 <div id="projectsContainer" className="pageDividerBox blackBackground">
 
                     <div id="projectsTextContainer" className="gradientText minWidth300 w-100">
-                        <h1 className="text-center">P r o j e c t s</h1>
+                        <h1 className="mt-4 text-center">Projects</h1>
                     </div>
 
-                    <div className="d-flex flex-row flex-wrap justify-content-around h-60 w-100">
+                    <div className="d-flex flex-row flex-wrap justify-content-around h-60 w-100 my-3">
                         <ProjectTile
                             title="PDF Splitter"
                             p1="Full-stack web app that allows for splitting PDFs in number of different ways."
@@ -91,8 +99,8 @@ export class Home extends Component {
 
 
                 <div id="skillsContainer" className="pageDividerBox grayBackground text-center">
-                    <div className="mh-10 gradientText">
-                        <h1>S k i l l s    &amp;    T e c h n o l o g i e s</h1>
+                    <div className="mh-10 mt-4 gradientText">
+                        <h1>Skills    &amp;    Technologies</h1>
                     </div>
                     <div className="d-flex flex-row flex-wrap justify-content-center mh-90">
                         <SkillTile text="Web API" imageNameWithExtension="aspNetCoreLogo.png" width={10} />
@@ -108,5 +116,10 @@ export class Home extends Component {
 
             </div >
         );
+    }
+
+    calculateNumberOfParticles(windowWidth) {
+        // there is no specific reason that its divided by 20 - just what happens to looks good.
+        return windowWidth / 20;
     }
 }

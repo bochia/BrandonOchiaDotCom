@@ -30,7 +30,7 @@ function PdfSplitter({ selectedOption, fileRef, inputRangeOrInterval, selectChan
 
     return (
         <div>
-            <h1>PDF Splitter</h1>
+            <h1 class="mt-3">PDF Splitter</h1>
             <p>
                 The backend for this page utilizes a PDF processor nuget package that I created and deployed myself.
                 The package is called "PDFTools.SplitMerge"" and allows for splitting/merging PDFs.
