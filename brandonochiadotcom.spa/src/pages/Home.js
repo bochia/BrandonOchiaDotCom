@@ -4,7 +4,6 @@ import SkillTile from '../components/SkillTile';
 import ProjectTile from '../components/ProjectTile';
 import ResumeTile from '../components/ResumeTile';
 import AboutMeSection from '../components/AboutSection';
-import buildImageUrl from '../utils/imageUrlBuilder';
 
 //TODO: Update this to a function component like you have done for PdfSplitter.
 export class Home extends Component {
