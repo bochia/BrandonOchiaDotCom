@@ -29,9 +29,9 @@ code {
 /*COPY PASTED CSS FROM OLD APPLICATION HERE.*/
 
 :root {
-    --main-bg-color-1: #181818;
+    --main-bg-color-1: #181818; /* dark gray */
     --main-bg-color-2: black;
-    --accentTextColor: #ec0b80;
+    --accentTextColor: #ec0b80; /* pink */
     --border-radius: 30px;
 }
 
@@ -712,6 +712,10 @@ input {
 
 .navBarTextColor {
     color: #c1cac2;
+}
+
+.navBarToggle {
+    background-color: #818581;
 }
 
 .navBarBackgroundColor {
