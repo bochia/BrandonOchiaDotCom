@@ -26,14 +26,14 @@ export class NavMenu extends Component {
             <header>
                 <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white box-shadow navBarBackgroundColor" container light>
                     <NavbarBrand tag={Link} to="/" className="navBarTextColor">Brandon Ochia</NavbarBrand>
-                    <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+                    <NavbarToggler onClick={this.toggleNavbar} className="mr-2 navBarToggle" />
                     <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
                         <ul className="navbar-nav flex-grow">
                             <NavItem>
                                 <NavLink tag={Link} className="navBarTextColor" to="/">Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag={Link} className="navBarTextColor" to="/pdfSplitter">Pdf Splitter</NavLink>
+                                <NavLink tag={Link} className="navBarTextColor" to="/pdfSplitter">PDF Splitter</NavLink>
                             </NavItem>
                             {/*<NavItem>*/}
                             {/*    <NavLink tag={Link} className="navBarTextColor" to="/bodyComposition">Body Composition</NavLink>*/}
