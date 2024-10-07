@@ -29,10 +29,10 @@ export class NavMenu extends Component {
                     <NavbarToggler onClick={this.toggleNavbar} className="mr-2 navBarToggle" />
                     <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
                         <ul className="navbar-nav flex-grow">
-                            <NavItem>
+                            <NavItem onClick={this.toggleNavbar}>
                                 <NavLink tag={Link} className="navBarTextColor" to="/">Home</NavLink>
                             </NavItem>
-                            <NavItem>
+                            <NavItem onClick={this.toggleNavbar}>
                                 <NavLink tag={Link} className="navBarTextColor" to="/pdfSplitter">PDF Splitter</NavLink>
                             </NavItem>
                             {/*<NavItem>*/}
